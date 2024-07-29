@@ -1,0 +1,14 @@
+{
+  "name": "kafka-app-first",
+  "version": "1.0.0",
+  "description": "kafka messaging stream example first",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikhil",
+  "license": "ISC",
+  "dependencies": {
+    "kafkajs": "^2.2.4"
+  }
+}
