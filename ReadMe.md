@@ -78,3 +78,12 @@ Encouragement to adopt Kafka for real-time data streaming needs.
 Slide 11: Questions
 Open floor for questions and discussions.
 These points can be expanded into detailed slides for the presentation and a comprehensive README file for documentation.
+
+Start Zookeper Container and expose PORT 2181.
+docker run -p 2181:2181 zookeeper
+Start Kafka Container, expose PORT 9092 and setup ENV variables.
+docker run -p 9092:9092 \
+-e KAFKA_ZOOKEEPER_CONNECT=<PRIVATE_IP>:2181 \
+-e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://<PRIVATE_IP>:9092 \
+-e KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1 \
+confluentinc/cp-kafka
